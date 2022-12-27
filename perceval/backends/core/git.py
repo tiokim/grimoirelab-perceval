@@ -636,10 +636,7 @@ class GitParser:
 
         # Concatenate message lines
         if 'message' not in self.commit:
-            self.commit['message'] = ''
-        else:
-            self.commit['message'] += '\n'
-        self.commit['message'] += msg_line
+            self.commit['message'] = msg_line
 
         # Check trailers
         self._handle_trailer(msg_line)
